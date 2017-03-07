@@ -1,0 +1,13 @@
+galaxy_info:
+  author: Sönke Liebau
+  description: Kerberos client tools
+  company: OpenCore GmbH & Co. KG
+
+  license: BSD
+
+  min_ansible_version: 1.2
+
+  platforms:
+  - name: RedHat
+    versions:
+    - 7
