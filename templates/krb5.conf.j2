@@ -13,11 +13,10 @@
 
 [realms]
  {{ KRB_REALM }} = {
-  kdc = {{ KRB_SERVER }}
-  admin_server = {{ KRB_SERVER }}
+  kdc = {{ KRB_KDC_SERVER }}
+  admin_server = {{ KRB_KDC_SERVER }}
  }
 
 [domain_realm]
  .{{ KRB_DOMAIN }} = {{ KRB_REALM }}
- {{ KRB_SERVER }} = {{ KRB_REALM }}
-
+ {{ KRB_KDC_SERVER }} = {{ KRB_REALM }}

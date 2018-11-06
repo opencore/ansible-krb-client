@@ -1,12 +1,14 @@
 ---
 # Purpose: Add Kerberos related traits to the nodes
-- name: Install Kerberos client packages
-  yum: name=krb5-workstation state=present
+- name: Ensure Kerberos client tools are installed
+  yum:
+    name: krb5-workstation
+    state: present
 
-- name: Copy and configure client krb5.conf
-  template: 
-    src=etc/krb5.conf.j2
-    dest=/etc/krb5.conf
-    mode=0644
-    owner=root
-    group=root
+- name: Ensure krb5.conf is up-to-date
+  template:
+    src: krb5.conf.j2
+    dest: /etc/krb5.conf
+    mode: 0644
+    owner: root
+    group: root

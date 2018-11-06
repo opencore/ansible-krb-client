@@ -1,4 +1,4 @@
 ---
 KRB_REALM: "{{ ansible_domain | upper }}"
-KRB_SERVER: "{{ ansible_hostname }}"
+KRB_KDC_SERVER: "{{ ansible_hostname }}"
 KRB_DOMAIN: "{{ ansible_domain }}"
